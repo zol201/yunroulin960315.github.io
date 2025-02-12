@@ -1,3 +1,16 @@
+/* 所有基本設定*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  flex: 1; /* 讓內容區域填滿剩餘空間 */
+}
+
+/* 全局樣式設定 */
 body {
   position: relative;
   margin: 0;
@@ -15,57 +28,311 @@ body::before {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  opacity: 0.65; /* 透明度調整至50% */
-  z-index: -1; /* 保證圖片在所有內容的下層 */
+  opacity: 0.65; /* 背景透明度 */
+  z-index: -1; /* 確保背景在所有內容之下 */
 }
+
+/* 表格基本樣式 */
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 10px solid rgba(175, 207, 186, 0.461); /* 邊界樣式 */
+  width: 500px;
+  padding: 15px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.65); /* 背景透明 */
+}
+
+th {
+  background-color: rgba(242, 242, 242, 0.90); /* 表頭背景 */
+}
+
+/* 固定左欄寬度為 60px */
+th:first-child,
+td:first-child {
+  width: 100px;
+  text-align: center; /* 內容置中 */
+}
+/* 標題樣式 */
+        
+/* 頁首樣式 */
+header {
+  display: flex;
+  align-items: center;  /* 讓圖片和文字垂直居中 */
+  justify-content: center; /* 讓圖片和文字水平居中 */
+  background: linear-gradient(to right, #a7ca9a8f, #1b8fa795); /* 從左到右的藍色漸層 */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+header img.header-logo {
+  width: 60px; /* 調整圖片大小 */
+  height: auto;
+  margin-right: 15px; /* 圖片與文字之間的距離 */
+}
+
+/* Header 專屬 h1 樣式 */
+header h1 {
+  font-family: Verdana;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff; /* 確保顏色不受全局 h1 影響 */
+  background: none; /* 清除可能繼承的背景 */
+  margin: 0;
+}
+
+/* Header 專屬 p 樣式 */
+header p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #fff; /* 確保顏色不受全局 p 影響 */
+  padding: 0;
+  text-align: center; /* 確保對齊 */
+}
+
+
 h1 {
   color: #35315a;
   text-align: center;
   font-size: 30px;
   background-color: rgba(240, 248, 255, 0.65);
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
 }
+
 h2 {
-  font-family: verdana;
+  font-family: Verdana;
   font-size: 20px;
-  font-weight: normal;
+  font-weight: bold;
   font-style: italic;
   color: #04272f;
   text-align: left;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 0 30px;
 }
+
+h3 {
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: #04272f;
+  text-align: center;
+  margin: 0 30px;
+}
+
+/* 段落樣式 */
 p {
-  font-family: verdana;
+  background-color: #afcdcbb4;
+  font-family: Verdana;
   font-size: 20px;
   text-align: center;
-  padding-top: 0px;
+  margin: 0 25px;
   padding-left: 10px;
-  margin-left: 25px;
-  margin-right: 25px;
 }
-p1 {
-  font-family: verdana;
+
+
+/* 導覽列樣式 */
+nav {
+  margin: 0;
+  padding: 0; 
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #afcdcbb4;
+}
+
+nav ul li {
+  margin: 0 50px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Verdana;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Logo 樣式 */
+img.logo {
+  margin-bottom: 0;
+  display: block;
+}
+
+/* 圖片容器，使用 Flexbox 來排列圖片 */
+.image-container {
+  display: flex;               /* 使用 Flexbox */
+  justify-content: center;     /* 讓圖片水平置中 */
+  align-items: center;         /* 讓圖片在垂直方向對齊 */
+  gap: 20px;                   /* 兩張圖片之間的間距 */
+  margin-top: 20px;            /* 與上方的距離 */
+  flex-wrap: wrap;             /* 如果空間不足，自動換行 */
+}
+.image-center {
+  text-align: center;
+  margin: 5px 0;
+}
+
+.image-center img {
+  max-width: 50%;
+  height: auto;
+  display: inline-block;
+}
+
+
+
+/* 單獨控制圖片的樣式 */
+.portfolio-img {
+  width: auto;              /* 每張圖片最大寬度為容器的45% */
+  max-height: 500px;                /* 自動調整高度，維持原始長寬比 */
+  object-fit: contain;         /* 確保圖片完整顯示，維持長寬比 */
+  border-radius: 8px;          /* 圓角邊框 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+}
+
+/* 響應式設計 (可根據需求調整) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .image-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Video 容器樣式 */
+.video-container {
+  display: flex;           /* 使用 Flexbox 讓影片置中 */
+  justify-content: center; /* 水平置中 */
+  align-items: center;     /* 垂直置中（如果父容器有高度） */
+  margin: 10px 0;          /* 上下間距 */
+  text-align: center;      /* 保險起見，保持文本置中 */
+}
+
+/* Video 樣式 */
+.video-container video {
+  width: 67.5%;      /* 影片高度多少 */
+  height: auto;     /* 固定高度 */
+  border-radius: 8px; /* 圓角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+}
+
+/* footer 樣式*/
+footer {
+  position: relative;   /* 固定底部 */
+  bottom: 0;         /* 使 footer 在頁面底部 */
+  left: 0;
+  width: 100%;       /* 宽度占满整个页面 */
+  background-color: #ffffff; /* 自定义底部背景颜色 */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* 可選：增加陰影效果 */
+}
+
+footer p{
+  background-color: #afcdcbb4;
+  font-family: Verdana;
   font-size: 15px;
   text-align: center;
-  padding-top: 0px;
+  margin: 0 25px;
   padding-left: 10px;
-  margin-left: 25px;
-  margin-right: 25px;
+  font-style: italic;
 }
-table {
+
+/* 圖片切換區塊 */
+.image-slider {
+  position: relative;
+  max-height: 500px; /* 調整最大寬度 */
+  width: auto;
+  margin: 0 auto; /* 置中 */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 圖片容器 */
+.image-container {
+  display: flex;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 100%;
-  border-collapse: collapse;
+  height: auto;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  gap: 5px; /* 縮小兩張圖片之間的間隔 */
+  transition: transform 0.5s ease-in-out;
 }
 
-th, td {
-  border: 35px solid rgba(175, 207, 186, 0.461); /* 邊界條變粗但無顏色 */
-  padding: 8px;
-  text-align: left;
-  background-color: rgba(255, 255, 255, 0.5); /* 背景透明度設置為 50% */
+/* 圖片組合 (兩張圖片並列) */
+.image-pair {
+  display: none;
+  flex-direction: row;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  width: 100%;
+  flex-shrink: 0;
+  gap: 5px; /* 縮小兩張圖片之間的間隔 */
+  display: none; /* 預設隱藏所有圖片組 */
 }
 
-th {
-  background-color: rgba(242, 242, 242, 0.5); /* 表頭背景設置為 50% 透明 */
+
+/* 顯示當前圖片組 */
+.image-pair.active {
+  display: flex;
+}
+
+/* 個別圖片樣式 */
+.image-pair .portfolio-img {
+  width: auto; /* 兩張圖片各佔 48% 的寬度 */
+  height: auto;
+  object-fit: cover; /* 保持圖片比例，填滿空間 */
+  border-radius: 8px; /* 圓角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 切換按鈕樣式 */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
