@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Yun-Rou Lin</title>
-    <!-- 網站圖示 -->
+    <!-- logo -->
     <link rel="icon" type="image/x-icon" href="201.png">
-    <!-- CSS 樣式 -->
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style_portofolio.css">
 </head>
-<body>
-    <!-- Header 區塊 -->
+<body class="portfolio-page">
+
+    <!-- Header -->
     <header>
         <img src="201.png" alt="Logo" class="header-logo">
         <h1>Portfolio</h1>
     </header>
 
-    <!-- 導覽列 -->
+    <!-- guide -->
     <nav>
         <ul>
             <li><a href="ABOUTME.html">About</a></li>
@@ -26,80 +27,121 @@
         </ul>
     </nav>
 
-    <!-- Projects 區塊 -->
+    <!-- Projects -->
     <main>
         <section>
-            <h1>Projects</h1>
-            
-            <!-- 專案 1: Flooding Mitigation in Wufang Village -->
+            <!-- intern project -->
             <article class="project">
-                <h3 style="margin-top: 5px;">Flooding Mitigation in Wufang Village (2021~2023)</h3>
+                <h3>Intern Highlight - 2025 Summer</h3>
                 <div class="project-content">
                     <div class="image-slider">
                         <div class="image-container">
-                            <!-- 第一組圖片 -->
+                            <!-- 第一組：兩張圖 -->
                             <div class="image-pair active">
-                                <img src="Wufang_2_zoom.png" alt="Wufang Project Image 1" class="portfolio-img">
-                                <img src="portofolio_flooding_1.png" alt="Wufang Project Image 2" class="portfolio-img">
+                                <div class="image-center">
+                                    <img src="Intern_1.png" alt="Intern Project Image 1" class="portfolio-img">
+                                    <h3 class="img-caption">The Problems the City Faces</h3>
+                                </div>
+                                <div class="image-center">
+                                    <img src="intern_2.png" alt="Intern Project Image 2" class="portfolio-img">
+                                    <h3 class="img-caption">Causes and Possible Solutions-1</h3>
+                                </div>
                             </div>
-                            <!-- 第二組圖片 -->
+
+                            <!-- 第二組：獨立一張圖 -->
                             <div class="image-pair">
-                                <img src="Wufang_improved.png" alt="Test Image 1" class="portfolio-img">
-                                <img src="Yanpu.jpg" alt="Test Image 2" class="portfolio-img">
+                                <div class="image-center">
+                                    <img src="intern_3.png" alt="Intern Project Image 3" class="portfolio-img">
+                                    <h3 class="img-caption">Causes and Possible Solutions-2</h3>
+                                </div>
                             </div>
                         </div>
-                        <!-- 切換按鈕 -->
+
+                        <!-- button -->
                         <button class="slider-btn prev">&#10094;</button>
                         <button class="slider-btn next">&#10095;</button>
                     </div>
-                    <p style="text-align: left; margin-top: 10px; margin-bottom: 10px; background-color:rgba(255, 255, 255, 0.6);">
-                        Wufang Village, a fishing community near the Donggang River, faces frequent flooding due to high tides and heavy rains. 
-                        Its proximity to the shoreline worsens drainage conditions, especially during high tides, making the area vulnerable. 
-                        Our team proposed solutions including pump stations, raised embankments, and automatic gates to prevent seawater inflow into fish ponds and city areas. 
-                        My role involved simulating flood scenarios and analyzing potential solutions to guide decision-making. 
-                        This experience reinforced my belief in the power of engineering to improve community resilience.
-                    </p>
+                        <div class="project-text">
+                        <div style="text-align: left; 
+                                margin: 20px auto; 
+                                max-width: 1400px; 
+                                background-color: rgba(255, 255, 255, 0.75); 
+                                padding: 64px 64px; 
+                                border-radius: 8px; 
+                                line-height: 2;">
+                            <ul style="margin: 0; padding-left: 20px;">
+                            <li>Supported sewer and drainage system modeling using InfoWorks ICM</li>
+                            <li>Updated manholes, conduits, subcatchments, and CIP shapefiles based on as-built data</li>
+                            <li>Performed 1D simulations of improvement plans under 5-year, 30-minute rainfall events</li>
+                            <li>Conducted GIS analysis, such as measuring river lengths across multiple stations</li>
+                            <li>Investigated cave-in incidents related to sewers, catch basins, private drains, etc.</li>
+                            </ul>
+
+                        </div>
+                        </div>
                 </div>
             </article>
-
-
             
+
+
+
+            <!-- NBS project -->
             <article class="project">
-                <h3>Flooding Mitigation with NBS (Natural Based Solutions)</h3>
+                <h3>Flooding Mitigation with NBS (2022~2023)</h3>
                 <div class="project-content">
                     <div class="image-slider">
                         <div class="image-container">
-                            <!-- 第一組圖片 -->
                             <div class="image-pair active">
-                                <img src="NBS_1.png" alt="NBS Project Image 1" class="portfolio-img">
-                                <img src="NBS-2.png" alt="NBS Project Image 2" class="portfolio-img">
+                                <div class="image-center">
+                                    <img src="NBS_1.png" alt="Intern Project Image 1" class="portfolio-img">
+                                    <h3 class="img-caption">Overview of the drainage system</h3>
+                                </div>
+                                <div class="image-center">
+                                    <img src="NBS-2.png" alt="Intern Project Image 2" class="portfolio-img">
+                                    <h3 class="img-caption">Causes of flooding - fluvial flooding</h3>
+                                </div>
                             </div>
-                            <!-- 第二組圖片 -->
-                            <div class="image-pair">
-                                <img src="NBS-3.png" alt="NBS Project Image 3" class="portfolio-img">
-                                <img src="detention.png" alt="NBS Project Image 4" class="portfolio-img">
+
+                            <div class="image-pair active">
+                                <div class="image-center">
+                                    <img src="NBS-3.png" alt="Intern Project Image 1" class="portfolio-img">
+                                    <h3 class="img-caption">Possible Solution-1 Channel Dredging</h3>
+                                </div>
+                                <div class="image-center">
+                                    <img src="NBS_edit_4.png" alt="Intern Project Image 2" class="portfolio-img">
+                                    <h3 class="img-caption">Possible Solution-2 Farmland Detention </h3>
+                                </div>
                             </div>
-                            <!-- 第三組圖片 -->
-                            <div class="image-pair">
-                                <img src="ESL.png" alt="NBS Project Image 4" class="portfolio-img">
+                            <div class="image-pair single">
+                            <div class="image-center">
+                                <img src="ESL.png" alt="Intern Project Image 3" class="portfolio-img same-size">
+                                <h3 class="img-caption">Overview of the project</h3>
                             </div>
+                            </div>
+
+
                         </div>
-                        <!-- 切換按鈕 -->
+                        <!-- button -->
                         <button class="slider-btn prev">&#10094;</button>
                         <button class="slider-btn next">&#10095;</button>
                     </div>
                     <div class="project-text">
-                        <p style="text-align: left; margin-top: 10px; margin-bottom: 10px; background-color:rgba(255, 255, 255, 0.6);">
-                            Flooding has become a persistent issue in the area due to the inadequate height of the levees. 
-                            Every time it rains, water overflows the levees and floods nearby villages. 
-                            While the authorities have decided not to build higher levees because of the relatively small population 
-                            and the perception that flood-related losses are limited, local residents continue to suffer significant 
-                            disruptions. Additionally, farmlands in the region are frequently affected by flooding, leading to crop damage 
-                            and financial losses for the farmers.
-                            After discussions with various parties, the final decision was to dredge the river and use farmland for flood detention.
-                            The original plan was to divert water from the canal into the farmland, but local farmers opposed the idea due to severe 
-                            river pollution.In the end, only rainwater was retained in the farmland, which reduced the efficiency of the flood control measures.
-                        </p>
+                        <div class="project-text">
+                        <div style="text-align: left; 
+                                margin: 20px auto; 
+                                max-width: 1400px; 
+                                background-color: rgba(255, 255, 255, 0.75); 
+                                padding: 64px 64px; 
+                                border-radius: 8px; 
+                                line-height: 2;">
+                            <ul style="margin: 0; padding-left: 20px;">
+                            <li><strong>Problem:</strong> Flooding has persisted due to <strong>1. inadequate levee height</strong> & <strong>2. backwater effect</strong> 
+                                ,rainwater frequently overtops levees and inundates nearby villages.</li>
+                            <li><strong>Impact:</strong> Residents continue to experience disruptions to daily life and concerns for their safety, while farmland repeatedly suffers crop damage and financial loss.</li>
+                            <li><strong>Proposed Solution:</strong> Dredge the river and use farmland (government & private) for flood detention.</li>
+                            <li><strong>Challenge:</strong> Original plan to divert polluted canal water into farmland was strongly opposed by farmers.</li>
+                            <li><strong>Final Solution:</strong> Only rainwater was retained in the farmland, reducing overall flood detention efficiency but addressing local concerns.</li>
+                        </ul>
                         <!--
                         <p>News related to the previous project:</p>
                         <a href="https://epaper.wra.gov.tw/Article_Detail.aspx?s=8269&n=30177" target="_blank">Read More</a>
@@ -107,7 +149,57 @@
                     </div>
                 </div>
             </article>
-            
+            <!-- WF project -->
+            <article class="project">
+                <h3 style="margin-top: 5px;">Flooding Mitigation in Wufang Village (2021~2023)</h3>
+                <div class="project-content">
+                    <div class="image-slider">
+                        <div class="image-container">
+                                        
+                            <div class="image-pair active">
+                                <div class="image-center">
+                                    <img src="Wufang_2_zoom.png" alt="Intern Project Image 1" class="portfolio-img">
+                                    <h3 class="img-caption">Overview of flooding issue</h3>
+                                </div>
+                                <div class="image-center">
+                                    <img src="portofolio_flooding_1.png" alt="Intern Project Image 2" class="portfolio-img">
+                                    <h3 class="img-caption">Possible reasons cause flooding</h3>
+                                </div>
+                            </div>
+
+                            <div class="image-pair active">
+                                <div class="image-center">
+                                    <img src="Wufang_improved.png" alt="Intern Project Image 1" class="portfolio-img">
+                                    <h3 class="img-caption">Improvement Methods</h3>
+                                </div>
+                                <div class="image-center">
+                                    <img src="Yanpu.jpg" alt="Intern Project Image 2" class="portfolio-img">
+                                    <h3 class="img-caption">Overview of SOBEK Model</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- button -->
+                        <button class="slider-btn prev">&#10094;</button>
+                        <button class="slider-btn next">&#10095;</button>
+                    </div>
+                        <div style="text-align: left; 
+                                margin: 20px auto; 
+                                max-width: 1400px; 
+                                background-color: rgba(255, 255, 255, 0.75); 
+                                padding: 64px 64px; 
+                                border-radius: 8px; 
+                                line-height: 2;">                     
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li><strong>Problem:</strong> Proximity to the shoreline worsens drainage conditions, especially during high tides, increasing flood vulnerability.</li>
+                                <li><strong>Proposed Solutions:</strong> Construction of pump stations, Leeve, and installation of automatic gates to prevent seawater inflow into fish ponds and city areas.</li>
+                                <li><strong>My Role:</strong> Simulated flood scenarios and analyzed potential solutions to support decision-making.</li>
+
+                            </ul>
+
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
 
