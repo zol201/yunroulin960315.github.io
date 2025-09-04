@@ -12,15 +12,30 @@
         .container {
             max-width: 1000px;
             margin: 20px auto;
-            padding: 50px;
+            padding: 40px;
             background: rgba(255, 255, 255, 0.75);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
             border-radius: 10px;
+            font-family: Verdana, sans-serif;
+        }
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 18px;
+        }
+        .contact-info a {
+            color: #0056a3;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        h2.section-title {
+            margin-top: 30px;
+            text-align: center;
         }
     </style>
 </head>
 <body class="portfolio-page">
-<body>
     <header>
         <img src="201.png" alt="Logo" class="header-logo">
         <h1>Contact</h1>
@@ -33,23 +48,32 @@
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
-    <body>
-        <div class="container">
-            <h2 style="text-align: center;">Yun-Rou Lin</h2>
-            <br></br>
-            <p style="background-color: rgba(255, 255, 255, 0); ">Tel: +1 447-902-7408</p>
-            <p style="background-color: rgba(255, 255, 255, 0);">Email: <a href="mailto:yunroul2@illinois.edu">yunroul2@illinois.edu</a></p>
-            <br></br>           
-            <p style="background-color: rgba(255, 255, 255, 0); ">Resume</p>
-            <embed src="RESUME_YRLin.pdf" type="application/pdf" width="100%" height="600px">
-            <br></br>  
-            <p>Transcript <a href="Unofficial Transcript_Yun-Rou Lin.pdf" download style="background-color: rgba(240, 248, 255, 0);">Yun-Rou Lin Transcript</a></p>
-            
+
+    <div class="container">
+        <!-- 聯絡方式 -->
+        <h2 style="text-align: center;">Yun-Rou Lin</h2>
+        <div class="contact-info" style="text-align: center;">
+            <p style="background-color: rgba(255, 255, 255, 0.75); 
+                                border-radius: 8px; 
+                                line-height: 1;"> Tel: +1 (447) 902-7408</p>
+            <p style="background-color: rgba(255, 255, 255, 0.75); 
+                                border-radius: 8px; 
+                                line-height: 1;"> Email: <a href="mailto:yunroul2@illinois.edu">yunroul2@illinois.edu</a> | <a href="mailto:sunnyzol0315@gmail.com">sunnyzol0315@gmail.com</a></p>
         </div>
-    </body>
+
+        <!-- Resume -->
+        <h2 class="section-title">Resume</h2>
+        
+        <embed src="RESUME_YRLin.pdf" type="application/pdf" width="100%" height="1150 px">
+
+        <!-- Transcript -->
+        <h2 class="section-title">Transcript</h2>
+        <embed src="Unofficial Transcript_Yun-Rou Lin.pdf" type="application/pdf" width="100%" height="1150px">
+
+    </div>
+
     <footer>
         <p>&copy; 2025 Yun-Rou Lin. All Rights Reserved.</p>
     </footer>
-</body>
 </body>
 </html>
